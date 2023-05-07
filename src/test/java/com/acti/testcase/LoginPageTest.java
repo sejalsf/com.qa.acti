@@ -67,6 +67,7 @@ EC.clicklogout();
 		String errmsg = lp.errorpage();
 		System.out.println(errmsg);
 		Assert.assertTrue(errmsg.contains("Username or Password is invalid"));
+		EC.quitdriver();
 
 	}
 
