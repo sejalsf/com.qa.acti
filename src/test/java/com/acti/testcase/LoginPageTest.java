@@ -23,6 +23,7 @@ public class LoginPageTest extends Basetest {
 		String expected = lp.getloginpagetitle();// called the method that get you title page
 		System.out.println(expected);
 		assertEquals(actual, expected);
+	
 
 	}
 
@@ -52,6 +53,9 @@ public class LoginPageTest extends Basetest {
 		lp.enterusername("Sejal");
 		lp.enterpassword("manager");
 		lp.loginbuttonmain();
+String actual = EC.getuserlogin();
+Assert.assertTrue(actual.contains("John Doe"));
+EC.clicklogout();
 
 	}
 
