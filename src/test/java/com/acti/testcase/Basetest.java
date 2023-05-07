@@ -1,6 +1,5 @@
 package com.acti.testcase;
 
-import org.bouncycastle.jcajce.provider.asymmetric.EC;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
