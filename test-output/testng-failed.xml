@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.acti.pages.LoginPage">
+      <class name="com.acti.base.DriverScript">
         <methods>
           <include name="initApplication"/>
         </methods>
-      </class> <!-- com.acti.pages.LoginPage -->
+      </class> <!-- com.acti.base.DriverScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
