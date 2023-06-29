@@ -32,7 +32,7 @@ public class LoginPageTest extends Basetest {
 		//// So in the logo we are just verified the logo but we don't have to print
 		//// anything
 		/// just verifing that the logo is displayed or not
-		// SO that is why we are usind assertion
+		// SO that is why we are using assertion
 
 		boolean flag = lp.verifiylogo();
 		assertTrue(flag);
