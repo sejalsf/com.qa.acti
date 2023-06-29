@@ -25,6 +25,25 @@ public class TaskPageTest extends Basetest{
 		
 		
 	}
+	public void DeleteCustomer() {
+		
+			lp.enterusername("admin");
+			lp.enterpassword("manger");
+			lp.loginbuttonmain();
+			String actual = EC.getuserlogin();
+			System.out.println(actual.contains("John Doe"));
+			EC.clicktask();
+			TP.ClickSearchButton("Sejal");
+			TP.clickEditButton();
+			TP.ClickActionButton();
+			TP.ClickDeleteButton();
+			TP.ClickDeletePermenently();
+			String msg = TP.getsuccessdeletemsg();
+			Assert.assertTrue(msg.contains("has been deleted"));
+			EC.clicklogout();
+	}
+	
+	
 
 	
 
