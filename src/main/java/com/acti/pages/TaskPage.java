@@ -14,7 +14,7 @@ public class TaskPage extends DriverScript{
 	@FindBy(xpath = "//input[@class='inputFieldWithPlaceholder newNameField inputNameField']") WebElement CustomerNametextbox;
 	@FindBy(xpath  = "//textarea[@placeholder='Enter Customer Description']") WebElement customerdescriptiontextBox;
 	@FindBy(xpath = "//div[@class='components_button withPlusIcon']") WebElement CreatcustomerButton;
-	
+	@FindBy(xpath = "//span[@class = 'innerHtml']") WebElement successmsg;
 	
 // ***********************Page Initialization***********************//
 	
@@ -48,7 +48,10 @@ public void clickcutomerbutton() {
 	CreatcustomerButton.click();
 }
 
-
+public String getsuccessmsg() {
+	return successmsg.getText();
+	
+}
 
 
 }
