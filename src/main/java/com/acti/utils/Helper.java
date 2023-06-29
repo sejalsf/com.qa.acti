@@ -3,7 +3,7 @@ package com.acti.utils;
 import com.acti.base.DriverScript;
 
 public class Helper extends DriverScript{
-	public void sleep() {
+	public static void sleep() {
 		
 		try {
 			Thread.sleep(3000);

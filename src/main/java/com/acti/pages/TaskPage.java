@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.acti.base.DriverScript;
+import com.acti.utils.Helper;
 
 public class TaskPage extends DriverScript{
 // ***********************Page Locators***********************//
@@ -68,6 +69,8 @@ public void ClickSearchButton(String Name) {
 
 public void clickEditButton() {
 	EditButton.click();
+	Helper.sleep();
+	//Helper is a class in which i am calling a method sleep
 }
 
 public void ClickActionButton() {
