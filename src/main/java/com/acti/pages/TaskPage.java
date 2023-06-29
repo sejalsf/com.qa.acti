@@ -1,6 +1,7 @@
 package com.acti.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,6 +16,13 @@ public class TaskPage extends DriverScript{
 	@FindBy(xpath  = "//textarea[@placeholder='Enter Customer Description']") WebElement customerdescriptiontextBox;
 	@FindBy(xpath = "//div[@class='components_button withPlusIcon']") WebElement CreatcustomerButton;
 	@FindBy(xpath = "//span[@class = 'innerHtml']") WebElement successmsg;
+	@FindBy(xpath = "(//input[@placeholder='Start typing name ...'])[1]") WebElement SearchButton;
+	@FindBy(xpath = "//div[@class = 'editButton']") WebElement EditButton;
+	@FindBy(xpath = "//div[@class='actionButtonWrapper pressed']//div[@class='actionButton']") WebElement Actionbutton;
+	@FindBy(xpath = "//div[@class='taskManagement_customerPanel']//div[@class='title'][normalize-space()='Delete']") WebElement DeleteButton;
+	@FindBy(xpath = "//span[normalize-space()='Delete permanently']") WebElement DeletepermenentlyButton;
+	@FindBy(xpath = "//span[@class = 'innerHtml']") WebElement SuccessDeletemsg;
+	
 	
 // ***********************Page Initialization***********************//
 	
@@ -53,6 +61,30 @@ public String getsuccessmsg() {
 	
 }
 
+public void ClickSearchButton(String Name) {
+	SearchButton.sendKeys(Name);
+}
+
+
+public void clickEditButton() {
+	EditButton.click();
+}
+
+public void ClickActionButton() {
+	Actionbutton.click();
+}
+
+public void ClickDeleteButton() {
+	DeleteButton.click();
+}
+
+public void ClickDeletePermenently() {
+	DeletepermenentlyButton.click();
+	
+}
+public String getsuccessdeletemsg() {
+	return SuccessDeletemsg.getText();
+}
 
 }
 	

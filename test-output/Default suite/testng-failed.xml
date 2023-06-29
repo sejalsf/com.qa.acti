@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.acti.base.DriverScript">
+      <class name="com.acti.testcase.TaskPageTest">
         <methods>
           <include name="initApplication"/>
+          <include name="teardown"/>
+          <include name="pretest"/>
+          <include name="Testcreatnewcustomer"/>
         </methods>
-      </class> <!-- com.acti.base.DriverScript -->
+      </class> <!-- com.acti.testcase.TaskPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
