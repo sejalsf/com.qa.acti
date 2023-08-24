@@ -47,7 +47,9 @@ public class DriverScript {
 	}
 	/*
 	 * InitaApplication will get the borwser detail form the properties file and lauch the application
-	 */
+ */
+
+
 public void initApplication() 
 {
 	String browser = prop.getProperty("Browser");
@@ -86,7 +88,7 @@ public void initApplication()
 }
 	private void launchurl() {
 
-String url = prop.getProperty("Url");
+String url = prop.getProperty("url");
 driver.get(url);
 	}
 	/*
